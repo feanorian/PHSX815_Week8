@@ -44,9 +44,11 @@ if __name__ == "__main__":
 	# array containing mu_best from simulation
 	mu_best_array = []
 
+	np.random.seed(666)
+	
 	# draws samples from a normal distribution with N_measurements for N_exp experiments 
-	for i in range(-100,100):
-	    mu_true = i
+	for i in range(-50,50):
+	    mu_true = i/10
 	    
 	    for exp  in range(N_exp):
 	        mu_best = 0
@@ -58,8 +60,10 @@ if __name__ == "__main__":
 	        mu_best_array.append(mu_best)
 	   
 	# Plots 2D histogram
-	plt.hist2d(mu_true_array, mu_best_array, bins=100)
+	
+	plt.hist2d(mu_true_array, mu_best_array, bins = 100,norm = colors.LogNorm())
 	plt.xlabel('$\mu_{true}$')
 	plt.ylabel('$\mu_{best}$')
 	plt.title(f'mu_best vs mu_true for {N_exp} experiments, {N_meas} measurements')
 	plt.colorbar()
+	plt.show()
