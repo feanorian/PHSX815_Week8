@@ -4,3 +4,15 @@
 
 
 This is a script to perform the Neyman construction 
+## neyman.py
+### Usage
+
+ `python3 neyman.py -mu -sigma -n -meas`
+ 
+ `-mu` experimental statistic (mean)
+ 
+ `-sigma` standard deviation
+ 
+ `-n` number of experiments
+ 
+ `-meas` number of measurements per experiment
