@@ -23,7 +23,7 @@ if __name__ == "__main__":
 		p = sys.argv.index('-mu')
 		mu_experiment = int(sys.argv[p+1])
 	else:
-		mu_experiment = 1
+		mu_experiment = 10
 	if '-sigma' in sys.argv:
 		p = sys.argv.index('-sigma')
 		sigma = float(sys.argv[p+1])
@@ -38,7 +38,7 @@ if __name__ == "__main__":
 		p = sys.argv.index('-meas')
 		N_meas = int(sys.argv[p+1])
 	else:
-		N_Meas = 10
+		N_meas = 10
 	# data array for mu_true
 	mu_true_array = []
 	# array containing mu_best from simulation
