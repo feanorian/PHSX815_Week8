@@ -50,9 +50,9 @@ if __name__ == "__main__":
 	for i in range(-100,100):
 	    mu_true = i/10
 	    
-	    for exp  in range(N_exp):
+	    for experiments  in range(N_exp):
 	        mu_best = 0
-	        for m in range(N_meas):
+	        for measurements in range(N_meas):
 	            sample = np.random.normal(mu_true, sigma)
 	            mu_best += sample
 	        mu_best = mu_best / N_meas
