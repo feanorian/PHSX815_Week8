@@ -47,7 +47,7 @@ if __name__ == "__main__":
 	np.random.seed(666)
 	
 	# draws samples from a normal distribution with N_measurements for N_exp experiments 
-	for i in range(-50,50):
+	for i in range(-100,100):
 	    mu_true = i/10
 	    
 	    for exp  in range(N_exp):
